@@ -1,71 +1,35 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Fire Fire Effect</title>
-        <style>
-            body {
-                background-color: #63431c;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            h1 {
-                font-family: impact;
-                margin: 0;
-                font-size: 35px;
-                text-shadow: 0px -1px 0px rgba(255, 255, 31, 0.4)
-            }
-
-            #fireCanvas {
-                margin: 10px;
-            }
-
-            table {
-                border-collapse: collapse;
-                border: 1px solid #000;
-            }
-
-            td {
-                width: 50px;
-                height: 50px;
-                border: 1px solid #000;
-                text-align: center;
-                vertical-align: center;
-                font-family: monospace;
-                font-size: 18;
-                position: relative;
-            
-            }
-            .pixel-index {
-                font-size: 10px;
-                display: inline-block;  
-                position: absolute;
-                top: 2px;
-                right: 2px;
-                color: #999;
-            }
-            
-            td.pixel {
-                width: 4px;
-                height: 4px;
-                border: 0px;
-            }
-
-            a {
-                color: #FFF;
-                font-size: 10px;
-                font-family: arial;
-            }
-
-        </style>
-    </head>
-    <body>
-        <center>
-            <h1>Doom Fire Effect</h1>
-            <a href="https://github.com/g4brielklein/doom-fire-algorithm">https://github.com/g4brielklein/doom-fire-algorithm</a>
-        </center>
-
-        <div id="fireCanvas"></div>
-        <script src="fire.js"></script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Doom Fire Effect</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<center>
+			<h1>Doom Fire Effect</h1>
+			<a href="https://github.com/g4brielklein/doom-fire-algorithm">https://github.com/g4brielklein/doom-fire-algorithm</a>
+			<div id="fireCanvas"></div>
+			<div class="margin">
+				<button onclick="decreaseFireSource()">-</button>
+				<button onclick="destroyFireSource()">Min Fire</button>
+				<button onclick="createFireSource()">Max Fire</button>
+				<button onclick="increaseFireSource()">+</button>
+			</div>
+			<div class="margin">
+				<button onclick="toggleDebugMode()">Toggle Debug Mode</button>
+			</div>
+			<div class="margin">
+				<span>Change the wind!</span>
+			</div>
+			<div class="margin">
+				<button onclick="changeWindDirection(0)"> < </button>
+				<button onclick="changeWindDirection(1)"> No wind </button>
+				<button onclick="changeWindDirection(2)"> > </button>
+			</div>
+		</center>
+		
+		<script src="fire.js"></script>
+		
+	</body>
 </html>
